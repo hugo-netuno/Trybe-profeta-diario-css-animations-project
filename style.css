@@ -1,0 +1,282 @@
+@media screen and ( max-width : 760px ) {
+
+  .container-layout {
+    background-color: yellow;
+  }
+}
+
+@media screen and ( min-width : 1170px ) {
+
+  .container-layout {
+    background-color: red;
+  }
+}
+
+@media screen and ( orientation : landscape ) {
+
+  .container-orientation {
+    border: 1px solid red;
+  }
+}
+
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerImages {
+  display: flex;
+  flex-direction: row;
+}
+
+.headerImages img {
+  width: 15%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 0;
+}
+
+nav ul li {
+  font-size: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  transition: text-decoration 1s step-start 500ms;
+}
+
+nav ul li:hover {
+  text-decoration: overline;
+}
+
+.asideAndMain {
+  display: flex;
+  flex-direction: row;
+}
+
+.alfa {
+  border: ridge 2px black;
+  display: flex;
+  height: 139.5px;
+  justify-content: flex-start;
+}
+
+p {
+  margin-left: 8%;
+  overflow-y: scroll;
+}
+
+.beta {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.overflow {
+  width: min-content;
+  word-wrap: break-word;
+}
+
+main {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  animation: colorsBackground 10s linear infinite, rotating 500ms steps(20) infinite;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+}
+
+.ball {
+  animation: colorsBall;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  background-color: black;
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+}
+
+@keyframes colorsBackground {
+
+  0% {
+    background-color: black;
+  }
+
+  11.11% {
+    background-color: white;
+  }
+
+  22.22% {
+    background-color: black;
+  }
+
+  33.33% {
+    background-color: white;
+  }
+
+  44.44% {
+    background-color: black;
+  }
+
+  55.55% {
+    background-color: white;
+  }
+
+  66.66% {
+    background-color: black;
+  }
+
+  77.77% {
+    background-color: white;
+  }
+
+  88.88% {
+    background-color: black;
+  }
+
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes colorsBall {
+
+  0% {
+    background-color: white;
+  }
+
+  11.11% {
+    background-color: black;
+  }
+
+  22.22% {
+    background-color: red;
+  }
+
+  33.33% {
+    background-color: red;
+  }
+
+  44.44% {
+    background-color: yellow;
+  }
+
+  55.55% {
+    background-color: yellow;
+  }
+
+  66.66% {
+    background-color: green;
+  }
+
+  77.77% {
+    background-color: green;
+  }
+
+  88.88% {
+    background-color: blue;
+  }
+
+  100% {
+    background-color: blue;
+  }
+}
+
+@keyframes rotating {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fly {
+  animation: flying 1s linear 3s 3 alternate forwards;
+}
+
+@keyframes flying {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(300px);
+  }
+
+  100% {
+    transform: translateX(450px);
+  }
+}
+
+.skewing {
+  animation: skewing 3s linear 6s;
+}
+
+@keyframes skewing {
+
+  0% {
+    transform: skew(-20deg, -20deg);
+  }
+
+  50% {
+    transform: skew(-30deg, -30deg);
+  }
+
+  100% {
+    transform: skew(-50deg, -50deg);
+  }
+}
+
+.scaling {
+  animation: scaling 3s ease-in;
+}
+
+@keyframes scaling {
+
+  0% {
+    transform: scale(0.1, 0.1);
+  }
+
+  50% {
+    transform: scale(0.5, 0.5);
+  }
+
+  100% {
+    transform: scale(0.9, 0.9);
+  }
+}
+
+.article-animation {
+  animation: article-grow 4s steps(400);
+  animation-fill-mode: backwards;
+  animation-play-state: running;
+  font-weight: 100;
+}
+
+@keyframes article-grow {
+
+  0% {
+    font-weight: 200;
+  }
+
+  100% {
+    font-weight: 900;
+    transform: scale(1.5, 1.5);
+  }
+}
